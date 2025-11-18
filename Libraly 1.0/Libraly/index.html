@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <title>Libraly - Sua Loja de Livros</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <header>
+    <div class="logo" onclick="window.location.href='index.html'">📚 Libraly</div>
+    
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Buscar livros, autores...">
+      <button id="searchButton">🔍</button>
+    </div>
+
+    <button class="menu-toggle-btn" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="main-nav">
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="faq.html">FAQ</a> 
+        <button id="theme-toggle-btn">🌙</button>
+    </nav>
+</header>
+
+    <div class="banner-carousel" id="bannerCarousel">
+  <div class="carousel-item active">
+    <img src="img/banner1.jpg" alt="Banner 1">
+    <div class="banner-text">
+      <h2>Descubra Novos Mundos</h2>
+      <p>Explore histórias incríveis e autores que transformam o conhecimento.</p>
+      <a href="#" class="banner-btn-link">Saiba Mais</a>
+    </div>
+  </div>
+
+  <div class="carousel-item">
+    <img src="img/banner2.png" alt="Banner 2">
+    <div class="banner-text">
+      <h2>Autores Que Inspiram</h2>
+      <p>Conheça os escritores que marcaram gerações e mudaram perspectivas.</p>
+      <a href="#" class="banner-btn-link">Ver Autores</a>
+    </div>
+  </div>
+
+  <div class="carousel-item">
+    <img src="img/banner3.png" alt="Banner 3">
+    <div class="banner-text">
+      <h2>Livros em Destaque</h2>
+      <p>Seleções especiais para quem ama boas histórias e grandes ideias.</p>
+      <a href="#" class="banner-btn-link">Ver Destaques</a>
+    </div>
+  </div>
+
+  <button class="banner-btn left" id="bannerPrev">❮</button>
+  <button class="banner-btn right" id="bannerNext">❯</button>
+
+  <div class="dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+  </div>
+</div>
+
+    <main>
+        <h2>Autores</h2>
+        <div class="carousel-wrapper">
+    <button class="carousel-btn left" id="authorsPrev"></button>
+
+    <div class="carousel" id="authorsCarousel">
+      <div class="author-box clickable">
+        <div class="author-circle" style="background-image: url('img/raphael.jpeg');"></div>
+        <h3>Raphael Montes</h3>
+      </div>
+      <div class="author-box clickable">
+        <div class="author-circle" style="background-image: url('img/step.jpg');"></div>
+        <h3>Stephen King</h3>
+      </div>
+      
+      <div class="author-box clickable">
+         <div class="author-circle" style="background-image: url('img/george.jpg');"></div>
+        <h3>George Orwell</h3>
+      </div>
+      <div class="author-box clickable">
+        <div class="author-circle" style="background-image: url('img/agatha.jpg');"></div>
+        <h3>Agatha Christie</h3>
+      </div>
+      <div class="author-box clickable">
+         <div class="author-circle" style="background-image: url('img/mac.jpeg');"></div>
+        <h3>Machado de Assis</h3>
+      </div>
+      <div class="author-box clickable">
+        <div class="author-circle" style="background-image: url('img/franz.jpg');"></div>
+        <h3>Franz Kafka</h3>
+      </div>
+      <div class="author-box clickable">
+        <div class="author-circle" style="background-image: url('img/lynn.jpg');"></div>
+        <h3>Lynn Painter</h3>
+      </div>
+      <div class="author-box clickable">
+        <div class="author-circle" style="background-image: url('img/james.jpg');"></div>
+        <h3>James Dashner</h3>
+      </div>
+    </div>
+
+    <button class="carousel-btn right" id="authorsNext"></button>
+  </div>
+        <h2>Livros Destaques da Semana</h2>
+<div class="carousel-wrapper">
+    <button class="carousel-btn left" id="highlightsPrev"></button>
+
+    <div class="carousel" id="highlightsCarousel">
+
+        <div class="book-box clickable"
+             data-title="Dias Perfeitos"
+             data-author="Raphael Montes"
+             data-description="Um thriller psicológico nacional extremamente elogiado, cheio de tensão e reviravoltas."
+             data-price="39.90"
+             data-img="img/Dias Perfeito.jpg">
+
+            <img class="book-img" src="img/Dias Perfeito.jpg" alt="Dias Perfeitos">
+            <div class="book-text">Dias Perfeitos</div>
+        </div>
+
+        <div class="book-box clickable"
+             data-title="Dom Casmurro"
+             data-author="Machado de Assis"
+             data-description="Um dos romances mais importantes da literatura brasileira, com o famoso mistério de Capitu."
+             data-price="29.90"
+             data-img="img/Dom Cas.jpg">
+
+            <img class="book-img" src="img/Dom Cas.jpg" alt="Dom Casmurro">
+            <div class="book-text">Dom Casmurro</div>
+        </div>
+
+        <div class="book-box clickable"
+             data-title="Infinity Ring"
+             data-author="James Dashner"
+             data-description="Uma aventura cheia de mistérios e viagens no tempo, perfeita para fãs de distopia e ação."
+             data-price="42.50"
+             data-img="img/Infinity Ring.jpg">
+
+            <img class="book-img" src="img/Infinity Ring.jpg" alt="Infinity Ring">
+            <div class="book-text">Infinity Ring</div>
+        </div>
+
+        <div class="book-box clickable"
+             data-title="It: A Coisa"
+             data-author="Stephen King"
+             data-description="Um dos livros mais famosos do mestre do terror, contando a história da criatura Pennywise."
+             data-price="59.90"
+             data-img="img/It a coisa.jpg">
+
+            <img class="book-img" src="img/It a coisa.jpg" alt="It: A Coisa">
+            <div class="book-text">It: A Coisa</div>
+        </div>
+
+
+        <div class="book-box clickable"
+             data-title="Lord of the Mysteries — Vol. 1"
+             data-author="Cuttlefish That Loves Diving"
+             data-description="Uma obra-prima de fantasia chinesa, misturando magia, mistério e investigação."
+             data-price="54.90"
+             data-img="img/LOTM 1.jpg">
+
+            <img class="book-img" src="img/LOTM 1.jpg" alt="Lord of the Mysteries 1">
+            <div class="book-text">Lord of the Mysteries 1</div>
+        </div>
+
+        <div class="book-box clickable"
+             data-title="Os Crimes ABC"
+             data-author="Agatha Christie"
+             data-description="Um dos casos mais famosos de Hercule Poirot, com um assassino que desafia o detetive em ordem alfabética."
+             data-price="34.90"
+             data-img="img/ABC.jpg">
+
+            <img class="book-img" src="img/ABC.jpg" alt="Os Crimes ABC">
+            <div class="book-text">Os crimes ABC</div>
+        </div>
+
+        <div class="book-box clickable"
+             data-title="Amor por Engano"
+             data-author="Tessa Bailey"
+             data-description="Uma comédia romântica leve e divertida, cheia de paixão, encontros e desencontros."
+             data-price="38.90"
+             data-img="img/Amor Por Engano.jpg">
+
+            <img class="book-img" src="img/Amor Por Engano.jpg" alt="Amor por Engano">
+            <div class="book-text">Amor por Engano</div>
+        </div>
+
+    </div>
+
+    <button class="carousel-btn right" id="highlightsNext"></button>
+</div>
+
+    </main>
+
+    <footer>
+    <div class="footer-content">
+      
+      <div class="footer-brand">
+        <h3>📚 Libraly</h3>
+        <p>Descubra novos mundos.</p>
+        <div class="social-icons">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Navegação</h4>
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Ajuda</h4>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Conta</h4>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Meu Carrinho</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Libraly - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        document.getElementById("searchButton").addEventListener("click", () => {
+            const query = document.getElementById("searchInput").value.trim();
+            if (query) {
+                localStorage.setItem("searchQuery", query);
+                window.location.href = "pesquisa.html";
+            }
+        });
+        document.getElementById("searchInput").addEventListener("keypress", (e) => {
+            if (e.key === "Enter") document.getElementById("searchButton").click();
+        });
+    </script>
+</body>
+</html>

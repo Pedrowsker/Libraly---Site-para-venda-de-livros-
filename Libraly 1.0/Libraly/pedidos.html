@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <title>Meus Pedidos - Libraly</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pedidos.css">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body class="pedidos-page">
+
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">📚 Libraly</div>
+    
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Buscar livros, autores...">
+      <button id="searchButton">🔍</button>
+    </div>
+
+    <button class="menu-toggle-btn" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="main-nav">
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="faq.html">FAQ</a> 
+        <button id="theme-toggle-btn">🌙</button>
+    </nav>
+</header>
+
+  <main>
+    <h1>Meus Pedidos</h1>
+    <div id="listaPedidos"></div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      
+      <div class="footer-brand">
+        <h3>📚 Libraly</h3>
+        <p>Descubra novos mundos.</p>
+        <div class="social-icons">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Navegação</h4>
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Ajuda</h4>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Conta</h4>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Meu Carrinho</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Libraly - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <div id="rastreamentoOverlay" class="overlay">
+    <div class="rastreamento-box">
+      <h2 id="rastreamentoTitulo">Rastreio do Pedido</h2>
+      <ul class="status-list">
+        <li>Pedido Confirmado</li>
+        <li>Aguardando Envio</li>
+        <li>A caminho</li>
+        <li>Saiu para entrega</li>
+        <li>Entregue</li>
+      </ul>
+      <button id="fecharRastreamento">Fechar</button>
+    </div>
+  </div>
+
+  <script src="js/pedidos.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+  const searchInput = document.getElementById("searchInput");
+  const searchButton = document.getElementById("searchButton");
+
+
+  function performSearch() {
+    const query = searchInput.value.trim();
+
+    localStorage.setItem("searchQuery", query);
+    window.location.href = "pesquisa.html";
+  }
+
+  searchButton.addEventListener("click", performSearch);
+
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      performSearch();
+    }
+  });
+</script>
+</body>
+</html>

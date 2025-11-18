@@ -1,0 +1,113 @@
+#theme-toggle-btn {
+  background: none;
+  border: none;
+  color: white; 
+  font-size: 1.5rem; 
+  cursor: pointer;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+#theme-toggle-btn:hover {
+  color: #ffc800; 
+}
+
+body.dark-theme {
+  background-color: #121212; 
+  color: #eeeeee; 
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+  background-color: #1a1a1a;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme nav a {
+  color: #ffffff;
+}
+body.dark-theme nav a:hover {
+  color: #ffc800;
+}
+
+body.dark-theme .search-bar input {
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark-theme .filters,
+body.dark-theme .book-card,
+body.dark-theme .book-container,
+body.dark-theme .order-summary,
+body.dark-theme .payment-form,
+body.dark-theme .related-box {
+  background-color: #1e1e1e; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .results h1,
+body.dark-theme .book-card h3,
+body.dark-theme .book-card span,
+body.dark-theme .book-info h1,
+body.dark-theme .book-info .price,
+body.dark-theme .filters h2,
+body.dark-theme .filters h3,
+body.dark-theme .filters label,
+body.dark-theme .order-summary h2,
+body.dark-theme .payment-form h2,
+body.dark-theme .payment-form h3,
+body.dark-theme .related h2,
+body.dark-theme .related-box h3,
+body.dark-theme main h2 {
+  color: #ffffff;
+}
+
+body.dark-theme .book-card p,
+body.dark-theme .book-info .author,
+body.dark-theme .book-info .description,
+body.dark-theme .related-box span {
+  color: #bbbbbb;
+}
+
+body.dark-theme .payment-form input {
+  background-color: #333;
+  border: 1px solid #555;
+  color: white;
+}
+
+body.dark-theme .payment-form input::placeholder {
+  color: #888;
+}
+
+body.dark-theme .author-box h3,
+body.dark-theme .book-box .book-text,
+body.dark-theme .book-box h3,
+body.dark-theme .book-box p,
+body.dark-theme .book-box span {
+    color: #000000 !important; 
+    text-shadow: none;
+}
+
+body.dark-theme .cart-summary h2,
+body.dark-theme .cart-summary span,
+body.dark-theme .cart-summary p,
+body.dark-theme .cart-summary div {
+    color: #333333 !important;
+}
+
+body.dark-theme .cart-item h3,
+body.dark-theme .cart-item p,
+body.dark-theme .cart-item .price,
+body.dark-theme .item-total span {
+    color: #333333 !important;
+}
+
+body.dark-theme .item-total {
+    color: #ffc800 !important; 
+}
+
+body.dark-theme .cart-item,
+body.dark-theme .summary-row {
+    border-bottom-color: #ddd; 
+}

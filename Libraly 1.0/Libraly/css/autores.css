@@ -1,0 +1,157 @@
+main {
+  padding: 40px 20px;
+}
+
+.author-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.author-page-container h1 {
+  text-align: center;
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.author-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.author-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 25px 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.author-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 15px auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border: 4px solid #fff;
+  flex-shrink: 0;
+}
+
+.author-card h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+}
+
+.author-card p {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 15px;
+  min-height: 40px; 
+  line-height: 1.4;
+}
+
+.author-btn {
+  background-color: #ffc800;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9em;
+  width: 100%;
+  margin-top: auto; 
+}
+
+.author-btn:hover {
+  background-color: #ffe167;
+}
+
+body.dark-theme .author-page-container h1 {
+  color: #ffffff;
+}
+
+body.dark-theme .author-card {
+  background-color: #1e1e1e;
+}
+
+body.dark-theme .author-image {
+  border-color: #1e1e1e;
+}
+
+body.dark-theme .author-card h3 {
+  color: #ffffff;
+}
+
+body.dark-theme .author-card p {
+  color: #bbbbbb;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px 10px;
+  }
+
+  .author-page-container h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .author-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+  }
+  
+  .author-card {
+    padding: 15px 10px;
+  }
+
+  .author-image {
+    width: 100px; 
+    height: 100px;
+    margin-bottom: 10px;
+    border-width: 2px; 
+  }
+
+  .author-card h3 {
+    font-size: 1.1em; 
+    margin-bottom: 3px;
+  }
+
+  .author-card p {
+    font-size: 0.85em; 
+    min-height: auto; 
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+
+  .author-btn {
+    padding: 8px 0; 
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 350px) {
+  .author-grid {
+    grid-template-columns: 1fr; 
+  }
+}

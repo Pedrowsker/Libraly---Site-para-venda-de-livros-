@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <title>Libraly - Autores</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/autores.css">
+    <link rel="stylesheet" href="css/theme.css"> 
+    </head>
+    <body>
+    
+        <header>
+    <div class="logo" onclick="window.location.href='index.html'">📚 Libraly</div>
+    
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Buscar livros, autores...">
+      <button id="searchButton">🔍</button>
+    </div>
+
+    <button class="menu-toggle-btn" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="main-nav">
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="faq.html">FAQ</a> 
+        <button id="theme-toggle-btn">🌙</button>
+    </nav>
+</header>
+
+    
+    <main class="author-page-container">
+        <h1>Nossos Autores</h1>
+        
+        <div class="author-grid">
+        
+        <div class="author-card" data-author="Raphael Montes">
+            <div class="author-image" style="background-image: url('img/raphael.jpeg');"></div>
+            <h3>Raphael Montes</h3>
+            <p>Mestre do suspense brasileiro.</p>
+            <button class="author-btn">Ver Livros</button>
+        </div>
+
+        <div class="author-card" data-author="Stephen King">
+            <div class="author-image" style="background-image: url('img/step.jpg');"></div>
+            <h3>Stephen King</h3>
+            <p>O Rei do Terror.</p>
+            <button class="author-btn">Ver Livros</button>
+        </div>
+
+        <div class="author-card" data-author="George Orwell">
+            <div class="author-image" style="background-image: url('img/george.jpg');"></div>
+            <h3>George Orwell</h3>
+            <p>Autor de clássicos distópicos.</p>
+            <button class="author-btn">Ver Livros</button>
+        </div>
+        
+        <div class="author-card" data-author="Agatha Christie">
+            <div class="author-image" style="background-image: url('img/agatha.jpg');"></div>
+            <h3>Agatha Christie</h3>
+            <p>A Dama do Crime.</p>
+            <button class="author-btn">Ver Livros</button>
+        </div>
+        
+        <div class="author-card" data-author="Machado de Assis">
+            <div class="author-image" style="background-image: url('img/mac.jpeg');"></div>
+            <h3>Machado de Assis</h3>
+            <p>Clássico da literatura brasileira.</p>
+            <button class="author-btn">Ver Livros</button>
+        </div>
+
+        <div class="author-card" data-author="Franz Kafka">
+            <div class="author-image" style="background-image: url('img/franz.jpg');"></div>
+            <h3>Franz Kafka</h3>
+            <p>Autor de "A Metamorfose".</p>
+            <button class="author-btn">Ver Livros</button>
+        </div>
+
+        <div class="author-card" data-author="Lynn Painter">
+            <div class="author-image" style="background-image: url('img/lynn.jpg');"></div>
+            <h3>Lynn Painter</h3>
+            <p>Autora de romances modernos.</p>
+            <button class="author-btn">Ver Livros</button>
+        </div>
+
+        <div class="author-card" data-author="James Dashner">
+            <div class="author-image" style="background-image: url('img/james.jpg');"></div>
+            <h3>James Dashner</h3>
+            <p>Autor de "Infinity Ring".</p>
+            <button class="author-btn">Ver Livros</button>
+        </div>
+
+        </div>
+    </main>
+
+    
+    <footer>
+    <div class="footer-content">
+      
+      <div class="footer-brand">
+        <h3>📚 Libraly</h3>
+        <p>Descubra novos mundos.</p>
+        <div class="social-icons">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Navegação</h4>
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Ajuda</h4>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Conta</h4>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Meu Carrinho</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Libraly - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+    <script src="js/autores.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+
+    function performSearch() {
+        const query = searchInput.value.trim();
+        localStorage.setItem("searchQuery", query);
+        window.location.href = "pesquisa.html";
+    }
+    searchButton.addEventListener("click", performSearch);
+    searchInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+        performSearch();
+        }
+    });
+    </script>
+</body>
+</html>

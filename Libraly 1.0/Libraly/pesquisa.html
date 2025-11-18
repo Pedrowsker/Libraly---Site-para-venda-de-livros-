@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <title>Libraly - Resultados da Pesquisa</title>
+  <link rel="stylesheet" href="css/pesquisa.css">
+  <link rel="stylesheet" href="css/theme.css"> 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">📚 Libraly</div>
+    
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Buscar livros, autores...">
+      <button id="searchButton">🔍</button>
+    </div>
+
+    <button class="menu-toggle-btn" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="main-nav">
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="faq.html">FAQ</a> 
+        <button id="theme-toggle-btn">🌙</button>
+    </nav>
+</header>
+
+
+  <div class="container">
+
+    <aside class="filters">
+      <h2>Filtrar Resultados</h2>
+
+      <button id="mobileFilterBtn" class="filter-toggle-btn">
+        📂 Mostrar Filtros
+      </button>
+
+      <div class="filter-sections-wrapper"> 
+          <div class="filter-section">
+              <h3>Preço</h3>
+              <label><input type="checkbox" name="price" value="0-30"> Até R$ 30</label>
+              <label><input type="checkbox" name="price" value="30-60"> R$ 30 - R$ 60</label>
+              <label><input type="checkbox" name="price" value="60-100"> R$ 60 - R$ 100</label>
+              <label><input type="checkbox" name="price" value="100-99999"> Acima de R$ 100</label>
+          </div>
+
+          <div class="filter-section">
+              <h3>Categoria</h3>
+              <label><input type="checkbox" name="category" value="Romance"> Romance</label>
+              <label><input type="checkbox" name="category" value="Suspense"> Suspense </label>
+              <label><input type="checkbox" name="category" value="Distopia"> Distopia</label>
+              <label><input type="checkbox" name="category" value="Ficção Policial"> Ficção Policial</label>
+              <label><input type="checkbox" name="category" value="Clássico Moderno"> Clássico Moderno</label>
+              <label><input type="checkbox" name="category" value="Ficção Científica"> Ficção Científica</label>
+              <label><input type="checkbox" name="category" value="Terror"> Terror</label>
+          </div>
+
+          <div class="filter-section">
+              <h3>Avaliação</h3>
+              <label><input type="checkbox" name="rating" value="5"> ⭐⭐⭐⭐⭐</label>
+              <label><input type="checkbox" name="rating" value="4"> ⭐⭐⭐⭐</label>
+              <label><input type="checkbox" name="rating" value="3"> ⭐⭐⭐</label>
+          </div>
+      </div>
+    </aside>  
+
+
+    <main class="results">
+      <h1>Resultados da pesquisa por: “livros populares”</h1>
+      <div class="books-grid">
+
+        <div class="book-card" data-title="Dias Perfeitos" data-author="Raphael Montes" data-price="49.90" data-img="img/Dias Perfeito.jpg" data-category="Suspense" data-rating="5">
+          <div class="book-img" id="bookImg1"> <img src="img/Dias Perfeito.jpg" alt=""></div>
+          <h3>Dias Perfeitos</h3>
+          <p>Raphael Montes</p>
+          <span>R$ 49,90</span>
+          <button>Comprar</button>
+        </div>
+        <div class="book-card" data-title="It A Coisa" data-author="Stephen King" data-price="69.90" data-img="img/It a coisa.jpg" data-category="Terror" data-rating="4">
+          <div class="book-img"> <img src="img/It a coisa.jpg" alt=""></div>
+          <h3>It A Coisa</h3>
+          <p>Stephen King</p>
+          <span>R$ 69,90</span>
+          <button>Comprar</button>
+        </div>
+        <div class="book-card" data-title="1984" data-author="George Orwell" data-price="59.90" data-img="img/1984.jpg" data-category="Distopia" data-rating="4">
+          <div class="book-img"> <img src="img/1984.jpg" alt=""></div>
+          <h3>1984</h3>
+          <p>George Orwell</p>
+          <span>R$ 59,90</span>
+          <button>Comprar</button>
+        </div>
+        <div class="book-card" data-title="ABC" data-author="Agatha Christie" data-price="59.90" data-img="img/ABC.jpg"data-category="Ficção Policial" data-rating="4">
+          <div class="book-img"> <img src="img/ABC.jpg" alt=""></div>
+          <h3>ABC</h3>
+          <p>Agatha Christie</p>
+          <span>R$ 59,90</span>
+          <button>Comprar</button>
+        </div>
+        <!-- LINHAS 2-5 -->
+        <div class="book-card" data-title="Dom Casmurro" data-author="Machado De Assis" data-price="104.90" data-img="img/Dom Cas.jpg"data-category="Romance" data-rating="5">
+          <div class="book-img"><img src="img/Dom Cas.jpg" alt=""></div>
+          <h3>Dom Casmurro</h3>
+          <p>Machado De Assis</p>
+          <span>R$ 104,90</span>
+          <button>Comprar</button>
+        </div>
+        <div class="book-card" data-title="A Metamorfose" data-author="Franz Kafka" data-price="119.90" data-img="img/A metamorfose.jpg" data-category="Clássico Moderno" data-rating="5">
+          <div class="book-img"><img src="img/A metamorfose.jpg" alt=""></div>
+          <h3>A Metamorfose</h3>
+          <p>Franz Kafka</p>
+          <span>R$ 119,90</span>
+          <button>Comprar</button>
+        </div>
+        <div class="book-card" data-title="Amor Por Engano" data-author="Lynn Painter" data-price="89.90" data-img="img/Amor Por Engano.jpg" data-category="Romance" data-rating="4">
+          <div class="book-img"><img src="img/Amor Por Engano.jpg" alt=""></div>
+          <h3>Amor Por Engano</h3>
+          <p>Lynn Painter</p>
+          <span>R$ 89,90</span>
+          <button>Comprar</button>
+        </div>
+        <div class="book-card" data-title="Infinity Ring" data-author="James Dashner" data-price="59.90" data-img="img/Infinity Ring.jpg" data-category="Ficção Científica" data-rating="3">
+          <div class="book-img"><img src="img/Infinity Ring.jpg" alt=""></div>
+          <h3>Infinity Ring</h3>
+          <p>James Dashner</p>
+          <span>R$ 59,90</span>
+          <button>Comprar</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      
+      <div class="footer-brand">
+        <h3>📚 Libraly</h3>
+        <p>Descubra novos mundos.</p>
+        <div class="social-icons">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Navegação</h4>
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Ajuda</h4>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Conta</h4>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Meu Carrinho</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Libraly - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/pesquisa.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/script.js"></script>
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const searchButton = document.getElementById("searchButton");
+
+  function performSearch() {
+    const query = searchInput.value.trim();
+    localStorage.setItem("searchQuery", query);
+    window.location.href = "pesquisa.html";
+  }
+
+
+  searchButton.addEventListener("click", performSearch);
+
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      performSearch();
+    }
+  });
+</script>
+
+</body>
+</html>

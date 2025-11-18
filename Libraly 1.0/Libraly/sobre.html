@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <title>Libraly - Sobre Nós</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sobre.css">
+  <link rel="stylesheet" href="css/theme.css"> 
+</head>
+<body>
+  
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">📚 Libraly</div>
+    
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Buscar livros, autores...">
+      <button id="searchButton">🔍</button>
+    </div>
+
+    <button class="menu-toggle-btn" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="main-nav">
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Carrinho</a>
+        <a href="faq.html">FAQ</a> 
+        <button id="theme-toggle-btn">🌙</button>
+    </nav>
+</header>
+
+  
+  <main class="about-container">
+    <h1>Sobre a Libraly</h1>
+    
+    <div class="about-section">
+      <h2>Nossa Missão</h2>
+      <p>
+        Na Libraly, acreditamos que cada livro é um portal para um novo mundo. Nossa missão é conectar
+        leitores de todas as idades às histórias que eles procuram, de forma fácil, acessível e
+        personalizada. Queremos ser mais do que uma loja; queremos ser o ponto de encontro para
+        amantes da literatura.
+      </p>
+    </div>
+    
+    <div class="about-section">
+      <h2>Nossa História</h2>
+      <p>
+        Fundada em 2025, a Libraly nasceu da paixão de um grupo de desenvolvedores e leitores
+        que sentiam falta de um espaço digital que unisse tecnologia de ponta com a curadoria
+        cuidadosa de uma livraria de bairro.
+      </p>
+    </div>
+
+    <div class="about-section">
+      <h2>Nossos Valores</h2>
+      <ul>
+        <li><b>Paixão:</b> Somos apaixonados por livros e pela transformação que a leitura proporciona.</li>
+        <li><b>Qualidade:</b> Oferecemos uma seleção cuidada e uma plataforma robusta e segura.</li>
+        <li><b>Inovação:</b> Usamos a tecnologia para criar a melhor experiência de descoberta e compra.</li>
+        <li><b>Comunidade:</b> Valorizamos nossos clientes e buscamos construir um espaço de troca e diálogo.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <div class="footer-content">
+      
+      <div class="footer-brand">
+        <h3>📚 Libraly</h3>
+        <p>Descubra novos mundos.</p>
+        <div class="social-icons">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Navegação</h4>
+        <a href="index.html">Início</a>
+        <a href="pesquisa.html">Livros</a>
+        <a href="autores.html">Autores</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Ajuda</h4>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Conta</h4>
+        <a href="pedidos.html">Meus Pedidos</a>
+        <a href="carrinho.html">Meu Carrinho</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Libraly - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+  const searchInput = document.getElementById("searchInput");
+  const searchButton = document.getElementById("searchButton");
+
+
+  function performSearch() {
+    const query = searchInput.value.trim();
+
+    localStorage.setItem("searchQuery", query);
+    window.location.href = "pesquisa.html";
+  }
+
+  searchButton.addEventListener("click", performSearch);
+
+
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      performSearch();
+    }
+  });
+</script>
+</body>
+</html>

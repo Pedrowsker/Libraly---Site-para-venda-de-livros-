@@ -1,0 +1,117 @@
+main {
+  padding: 40px 20px;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-container h1 {
+  text-align: center;
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-container p {
+  text-align: center;
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1em;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box; 
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffc800;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  padding: 14px 20px;
+  background-color: #ffc800;
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #ffe167;
+}
+
+body.dark-theme .contact-container {
+  background-color: #1e1e1e;
+}
+
+body.dark-theme .contact-container h1,
+body.dark-theme .contact-container p,
+body.dark-theme .form-group label {
+  color: #ffffff;
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+  background-color: #333;
+  border: 1px solid #555;
+  color: white;
+}
+
+body.dark-theme .form-group input::placeholder,
+body.dark-theme .form-group textarea::placeholder {
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .contact-container h1 {
+    font-size: 1.8em;
+  }
+}
